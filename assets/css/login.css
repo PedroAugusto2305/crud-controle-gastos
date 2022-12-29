@@ -113,6 +113,15 @@
   cursor: pointer;
 }
 
+/* Error message */
+
+.error {
+  font-family: 'Roboto';
+  font-size: 1.4rem;
+  color: red;
+  display: none;
+}
+
 /* Image side */
 
 .image-background {

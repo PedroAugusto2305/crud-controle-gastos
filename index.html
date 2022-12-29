@@ -19,11 +19,14 @@
         <div class="form-input">
           <label for="email">Email</label>
           <br>
-          <input type="email" name="email" id="email" onchange="validateFields()">
+          <input type="email" name="email" id="email" onchange="onChangeEmail()">
+          <p class="error" id="emailRequiredError">Email é obrigatório</p>
+          <p class="error" id="emailInvalidError">Email é inválido</p>
         </div>
         <div class="form-input">
           <label for="password">Senha</label>
-          <input type="password" name="password" id="password" onchange="validateFields()">
+          <input type="password" name="password" id="password" onchange="onChangePassword()">
+          <p class="error" id="passwordRequiredError">Senha é obrigatória</p>
         </div>
         <div class="checked-container">
           <div class="radio-container">
