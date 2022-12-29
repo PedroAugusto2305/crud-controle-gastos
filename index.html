@@ -4,9 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Login - Controle de Gastos</title>
 </head>
 <body>
-  
+  <section id="login-page">
+    <section class="form-section" id="form">
+      <div class="form-title">
+        <h2>Bem vindo de volta</h2>
+        <h1>Faça login na sua conta</h1>
+      </div>
+      <form action="">
+        <div class="form-input">
+          <label for="email">Email</label>
+          <br>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="form-input">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password">
+        </div>
+        <div class="checked-container">
+          <div class="radio-container">
+            <input type="radio" name="remember">
+            <label for="remember">Lembrar de mim</label>
+          </div>
+        <button class="password-recovery">Recuperar senha</button>
+        </div>
+        <button class="login">Entrar</button>
+        <button class="register">Registrar</button>
+      </form>
+    </section>
+    <section class="image-background">
+      <img src="/assets/images/login-image.png" alt="">
+    </section>
+  </section>
 </body>
 </html>

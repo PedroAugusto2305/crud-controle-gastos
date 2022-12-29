@@ -1,0 +1,118 @@
+#login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-section {
+  width: 35rem;
+  margin: 21rem auto;
+  /* border: 2px solid red; */
+}
+
+.form-title {
+  font-family: 'Roboto';
+}
+
+.form-title h2 {
+  font-size: 1.6rem;
+  margin-bottom: .07rem;
+}
+
+.form-title h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 3.9rem;
+}
+
+.form-input label {
+  font-size: 1.6rem;
+  font-family: 'Roboto';
+}
+
+.form-input input {
+  border: 1px solid #E8E8E8;
+}
+
+.form-input input,
+[type=email],
+[type=password] {
+  width: 35rem;
+  height: 5rem;
+  border-radius: 5px;
+  margin: 1.1rem 0;
+}
+
+.checked-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.6rem;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checked-container+.radio-container+input {
+  border: 1px solid #E8E8E8;
+
+}
+
+.radio-container label {
+  font-family: 'Roboto';
+  font-size: 1.4rem;
+  margin-left: 1rem;
+}
+
+.checked-container .password-recovery {
+  border: none;
+  background-color: transparent;
+  color: #2B6CB0;
+  font-family: 'Roboto';
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.login {
+  width: 34.7rem;
+  height: 5rem;
+  background-color: #04C35C;
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.register {
+  width: 34.7rem;
+  height: 5rem;
+  background-color: #1A202C;
+  font-family: 'Roboto';
+  font-size: 1.6rem;
+  font-weight: 500;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Image side */
+
+.image-background {
+  width: 50vw;
+  margin: 0 auto;
+  /* border: 2px solid blue; */
+}
+
+.image-background img {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
