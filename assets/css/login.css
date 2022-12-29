@@ -76,6 +76,11 @@
   cursor: pointer;
 }
 
+.checked-container button[disabled] {
+  opacity: 0.5;
+}
+
+
 .login {
   width: 34.7rem;
   height: 5rem;
@@ -89,6 +94,11 @@
   cursor: pointer;
   margin-bottom: 1.5rem;
 }
+
+.login[disabled] {
+  opacity: 0.5;
+}
+
 
 .register {
   width: 34.7rem;
