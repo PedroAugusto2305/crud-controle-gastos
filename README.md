@@ -1,0 +1,1 @@
+# Aplicação criada para controle de gastos de um usuário.
