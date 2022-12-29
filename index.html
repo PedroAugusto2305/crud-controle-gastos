@@ -19,20 +19,20 @@
         <div class="form-input">
           <label for="email">Email</label>
           <br>
-          <input type="email" name="email" id="email">
+          <input type="email" name="email" id="email" onchange="validateFields()">
         </div>
         <div class="form-input">
           <label for="password">Senha</label>
-          <input type="password" name="password" id="password">
+          <input type="password" name="password" id="password" onchange="validateFields()">
         </div>
         <div class="checked-container">
           <div class="radio-container">
             <input type="radio" name="remember">
             <label for="remember">Lembrar de mim</label>
           </div>
-        <button class="password-recovery">Recuperar senha</button>
+        <button class="password-recovery" id="recoverPassword" disabled="true">Recuperar senha</button>
         </div>
-        <button class="login">Entrar</button>
+        <button class="login" id="loginBtn" disabled="true">Entrar</button>
         <button class="register">Registrar</button>
       </form>
     </section>
@@ -40,5 +40,6 @@
       <img src="./assets/images/login-image.png" alt="">
     </section>
   </section>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
