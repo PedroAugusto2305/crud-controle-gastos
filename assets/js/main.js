@@ -6,6 +6,15 @@ function onChangePassword() {
   toggleButtonDisable()
   togglePasswordErrors()
 }
+
+function login() {
+  window.location.href = "./assets/pages/home.html";
+}
+
+function register() {
+  window.location.href = "./assets/pages/register.html";
+}
+
 function isEmailValid() {
   const email = form.email().value;
   if (!email) {
