@@ -1,13 +1,21 @@
 #login-page {
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
 }
 
-.form-section {
-  width: 35rem;
-  margin: 21rem auto;
-  /* border: 2px solid red; */
+.form-login {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.form-login-wrapper {
+  max-width: 35rem;
 }
 
 .form-title {
@@ -124,13 +132,19 @@
 
 /* Image side */
 
-.image-background {
-  width: 50vw;
-  margin: 0 auto;
-  /* border: 2px solid blue; */
+.banner-login {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.image-background img {
+
+
+
+.banner-login img {
   width: 500px;
   height: 500px;
   margin: 0 auto;

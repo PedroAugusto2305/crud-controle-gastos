@@ -9,40 +9,45 @@
   <title>Login - Controle de Gastos</title>
 </head>
 <body>
-  <section id="login-page">
-    <section class="form-section" id="form">
-      <div class="form-title">
-        <h2>Bem vindo de volta</h2>
-        <h1>Faça login na sua conta</h1>
-      </div>
-      <form action="">
-        <div class="form-input">
-          <label for="email">Email</label>
-          <br>
-          <input type="email" name="email" id="email" onchange="onChangeEmail()">
-          <p class="error" id="emailRequiredError">Email é obrigatório</p>
-          <p class="error" id="emailInvalidError">Email é inválido</p>
-        </div>
-        <div class="form-input">
-          <label for="password">Senha</label>
-          <input type="password" name="password" id="password" onchange="onChangePassword()">
-          <p class="error" id="passwordRequiredError">Senha é obrigatória</p>
-        </div>
-        <div class="checked-container">
-          <div class="radio-container">
-            <input type="radio" name="remember">
-            <label for="remember">Lembrar de mim</label>
+  <main>
+    <section id="login-page" class="max-width">
+      <section class="form-login" id="form">
+        <div class="form-login-wrapper">
+          <div class="form-title">
+            <h2>Bem vindo de volta</h2>
+            <h1>Faça login na sua conta</h1>
           </div>
-        <button class="password-recovery" id="recoverPassword" disabled="true">Recuperar senha</button>
+          <form action="">
+            <div class="form-input">
+              <label for="email">Email</label>
+              <br>
+              <input type="email" name="email" id="email" onchange="onChangeEmail()">
+              <p class="error" id="emailRequiredError">Email é obrigatório</p>
+              <p class="error" id="emailInvalidError">Email é inválido</p>
+            </div>
+            <div class="form-input">
+              <label for="password">Senha</label>
+              <input type="password" name="password" id="password" onchange="onChangePassword()">
+              <p class="error" id="passwordRequiredError">Senha é obrigatória</p>
+            </div>
+            <div class="checked-container">
+              <div class="radio-container">
+                <input type="radio" name="remember">
+                <label for="remember">Lembrar de mim</label>
+              </div>
+            <button class="password-recovery" id="recoverPassword" disabled="true">Recuperar senha</button>
+            </div>
+            <button class="login" id="loginBtn" disabled="true">Entrar</button>
+            <button class="register">Registrar</button>
+          </form>
         </div>
-        <button class="login" id="loginBtn" disabled="true">Entrar</button>
-        <button class="register">Registrar</button>
-      </form>
+      </section>
+  
+      <section class="banner-login">
+        <img src="./assets/images/login-image.png" class="image-banner" alt="">
+      </section>
     </section>
-    <section class="image-background">
-      <img src="./assets/images/login-image.png" alt="">
-    </section>
-  </section>
+  </main>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
