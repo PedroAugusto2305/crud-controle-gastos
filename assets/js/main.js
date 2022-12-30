@@ -31,7 +31,7 @@ function toggleButtonDisable() {
   form.recoverPassword().disabled = !emailValid;
 
   const passwordValid = isPasswordValid();
-  form.loginBtn().disabled = !emailValid || !passwordValid;
+  form.loginButton().disabled = !emailValid || !passwordValid;
 }
 
 
@@ -42,8 +42,6 @@ function isPasswordValid() {
   }
   return true;
 }
-
-
 
 const form = {
   email: () => document.getElementById('email'),
