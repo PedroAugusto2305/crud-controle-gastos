@@ -7,7 +7,7 @@ function onChangePassword() {
   togglePasswordErrors()
 }
 function isEmailValid() {
-  const email = document.getElementById('email').value;
+  const email = form.email().value;
   if (!email) {
     return false;
   }
@@ -15,46 +15,42 @@ function isEmailValid() {
 }
 
 function toggleEmailErrors() {
-  const email = document.getElementById('email').value;
-  if (!email) {
-    document.getElementById('emailRequiredError').style.display = 'block';
-  } else {
-    document.getElementById('emailRequiredError').style.display = 'none';
-  }
-
-  if (validateEmail(email)) {
-    document.getElementById('emailInvalidError').style.display = 'none';
-  } else {
-    document.getElementById('emailInvalidError').style.display = 'block';
-  }
+  const email = form.email().value;
+  form.emailRequiredError().style.display = email ? 'none' : 'block';
+  form.emailInvalidError().style.display = validateEmail(email) ? 'none' : 'block';
 }
 
+
 function togglePasswordErrors() {
-  const password = document.getElementById('password').value;
-  if (!password) {
-    document.getElementById('passwordRequiredError').style.display = 'block';
-  } else {
-    document.getElementById('passwordRequiredError').style.display = 'none';
-  }
+  const password = form.password().value;
+  form.passwordRequiredError().style.display = password ? 'none' : 'block';
 }
 
 function toggleButtonDisable() {
   const emailValid = isEmailValid();
-  document.getElementById('recoverPassword').disabled = !emailValid;
+  form.recoverPassword().disabled = !emailValid;
 
   const passwordValid = isPasswordValid();
-  document.getElementById('loginBtn').disabled = !emailValid || !passwordValid;
+  form.loginBtn().disabled = !emailValid || !passwordValid;
 }
 
 
 function isPasswordValid() {
-  const password = document.getElementById('password').value;
+  const password = form.password().value;
   if (!password) {
     return false;
   }
   return true;
 }
 
-function validateEmail(email) {
-  return /\S+@\S+\.\S+/.test(email);
+
+
+const form = {
+  email: () => document.getElementById('email'),
+  emailInvalidError: () => document.getElementById('emailInvalidError'),
+  emailRequiredError: () => document.getElementById('emailRequiredError'),
+  loginButton: () => document.getElementById('loginBtn'),
+  password: () => document.getElementById('password'),
+  passwordRequiredError: () => document.getElementById('passwordRequiredError'),
+  recoverPassword: () => document.getElementById('recoverPassword')
 }
