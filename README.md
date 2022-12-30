@@ -10,8 +10,9 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Login page
+- [x] Página de login
 - [x] Validação do formulário
+- [x] Navegação entre páginas
 - [ ] Configuração do Firebase authentication
 - [ ] Conectar Firebase à aplicação
 - [ ] Em breve...
