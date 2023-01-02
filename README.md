@@ -13,16 +13,16 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Página de login
 - [x] Validação do formulário
 - [x] Navegação entre páginas
-- [ ] Configuração do Firebase authentication
-- [ ] Conectar Firebase à aplicação
-- [ ] Em breve...
-- [ ] Em breve...
+- [x] Configuração do Firebase authentication
+- [x] Conectar Firebase à aplicação
+- [ ] Componente de Loading
+- [ ] Password Recovery com Firebase
 
 ## 📫 Contribuindo para o projeto.
 
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
 
-Para contribuir com Portfólio - Pedro Augusto, siga estas etapas:
+Para contribuir com o projeto, siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
