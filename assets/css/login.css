@@ -103,9 +103,9 @@
   margin-bottom: 1.5rem;
 }
 
-.login[disabled] {
+/* .login[disabled] {
   opacity: 0.5;
-}
+} */
 
 
 .register {

@@ -8,7 +8,18 @@ function onChangePassword() {
 }
 
 function login() {
-  window.location.href = "./assets/pages/home.html";
+  firebase.auth().signInWithEmailAndPassword(form.email().value, form.password().value).then(response => {
+    window.location.href = "./assets/pages/home.html";
+  }).catch(error => {
+    alert(getErrorMessage(error))
+  });
+
+  function getErrorMessage(error) {
+    if (error.code == 'auth/wrong-password') {
+      return "Usuário não encontrado!";
+    }
+    return error.message;
+  }
 }
 
 function register() {
