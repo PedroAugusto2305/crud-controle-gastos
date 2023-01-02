@@ -139,6 +139,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 
 
@@ -148,4 +149,26 @@
   width: 500px;
   height: 500px;
   margin: 0 auto;
+}
+
+/* Loading Component */
+
+.loading-component {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.loading-text {
+  font-family: 'Roboto';
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
 }

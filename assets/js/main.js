@@ -22,7 +22,9 @@ function login() {
   }
 }
 
+
 function register() {
+  // showLoading();
   window.location.href = "./assets/pages/register.html";
 }
 
