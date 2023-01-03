@@ -21,8 +21,8 @@ function login() {
 }
 
 function register() {
-  // showLoading();
-  window.location.href = "./assets/pages/register.html";
+  showLoading();
+  // window.location.href = "./assets/pages/register.html";
 }
 
 function RecoveryPassword() {

@@ -153,7 +153,7 @@
 
 /* Loading Component */
 
-.loading-component {
+.loading {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100vw;
@@ -162,6 +162,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  z-index: 5;
 }
 
 
@@ -169,6 +170,7 @@
   font-family: 'Roboto';
   color: white;
   margin-bottom: 1rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   letter-spacing: 2px;
+  z-index: 5;
 }
