@@ -1,61 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Login - Controle de Gastos</title>
-</head>
-<body>
-  <main>
-    <section id="login-page" class="max-width">
-      <section class="form-login" id="form">
-        <div class="form-login-wrapper">
-          <div class="form-title">
-            <h2>Bem vindo de volta</h2>
-            <h1>Faça login na sua conta</h1>
-          </div>
-          <form action="">
-            <div class="form-input">
-              <label for="email">Email</label>
-              <br>
-              <input type="email" name="email" id="email" onchange="onChangeEmail()">
-              <p class="error" id="emailRequiredError">Email é obrigatório</p>
-              <p class="error" id="emailInvalidError">Email é inválido</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Login - Controle de Gastos</title>
+  </head>
+  <body>
+    <main>
+      <section class="container max-width">
+        <section class="form-container" id="form">
+          <div class="form-wrapper">
+            <div class="form-title">
+              <h2>Bem vindo de volta</h2>
+              <h1>Faça login na sua conta</h1>
             </div>
-            <div class="form-input">
-              <label for="password">Senha</label>
-              <input type="password" name="password" id="password" onchange="onChangePassword()">
-              <p class="error" id="passwordRequiredError">Senha é obrigatória</p>
-            </div>
-            <div class="checked-container">
-              <div class="radio-container">
-                <input type="radio" name="remember">
-                <label for="remember">Lembrar de mim</label>
+            <form action="">
+              <div class="form-input">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input-form"
+                  onchange="onChangeEmail()"
+                />
+                <p class="error" id="emailRequiredError">Email é obrigatório</p>
+                <p class="error" id="emailInvalidError">Email é inválido</p>
               </div>
-            <button type="button" class="password-recovery"  id="recoverPassword" onclick="RecoveryPassword()" disabled="true">Recuperar senha</button>
-            </div>
-            <button type="button" class="login" id="loginBtn" disabled="true" onclick="login()">Entrar</button>
-            <button type= "button" class="register" onclick="register()">Registrar</button>
-          </form>
-        </div>
-      </section>
-<!-- <div class="loading">
+              <div class="form-input">
+                <label for="password" class="form-label">Senha</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="input-form"
+                  onchange="onChangePassword()"
+                />
+                <p class="error" id="passwordRequiredError">
+                  Senha é obrigatória
+                </p>
+              </div>
+              <div class="checked-container">
+                <div class="radio-container">
+                  <input type="radio" name="remember" class="input-radio" />
+                  <label for="remember" class="form-label"
+                    >Lembrar de mim</label
+                  >
+                </div>
+                <button
+                  type="button"
+                  class="password-recovery"
+                  id="recoverPassword"
+                  onclick="RecoveryPassword()"
+                  disabled="true"
+                >
+                  Recuperar senha
+                </button>
+              </div>
+              <button
+                type="button"
+                class="green-button-form"
+                id="loginBtn"
+                disabled="true"
+                onclick="login()"
+              >
+                Entrar
+              </button>
+              <button
+                type="button"
+                class="gray-button-form"
+                onclick="register()"
+              >
+                Registrar
+              </button>
+            </form>
+          </div>
+        </section>
+        <!-- <div class="loading">
   <label class="loading-text">Loading...</label>
 </div> -->
-      <section class="banner-login">
-        <img src="./assets/images/login-image.png" class="image-banner" alt="">
+        <section class="banner-login">
+          <img
+            src="./assets/images/login-image.png"
+            class="image-banner"
+            alt=""
+          />
+        </section>
       </section>
-    </section>
-  </main>
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/validations.js"></script>
-  <script src="./assets/js/loading.js"></script>
-  
-  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
-  <script src="./assets/js/firebase.js"></script>
-</body>
+    </main>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/validations.js"></script>
+    <script src="./assets/js/loading.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+    <script src="./assets/js/firebase.js"></script>
+  </body>
 </html>
