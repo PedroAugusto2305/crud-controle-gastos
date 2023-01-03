@@ -13,7 +13,23 @@ function login() {
     form.email().value, form.password().value
   ).then(() => {
     // hideLoading();
-    window.location.href = "pages/home/home.html";
+    window.location.href = "./assets/pages/home.html";
+  }).catch(error => {
+    // hideLoading();
+    alert(getErrorMessage(error));
+  });
+}
+
+function register() {
+  // showLoading();
+  window.location.href = "./assets/pages/register.html";
+}
+
+function RecoveryPassword() {
+  // showLoading();
+  firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+    // hideLoading();
+    alert('Email enviado com sucesso');
   }).catch(error => {
     // hideLoading();
     alert(getErrorMessage(error));
@@ -28,23 +44,6 @@ function getErrorMessage(error) {
   }
   return error.message;
 }
-
-function register() {
-  // showLoading();
-  window.location.href = "./assets/pages/register.html";
-}
-
-function RecoveryPassword() {
-  // showLoading();
-  firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
-    hideLoading();
-    alert('Email enviado com sucesso');
-  }).catch(error => {
-    // hideLoading();
-    alert(getErrorMessage(error));
-  });
-}
-
 
 function isEmailValid() {
   const email = form.email().value;
