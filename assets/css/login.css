@@ -54,24 +54,6 @@
   display: none;
 }
 
-/* Image side */
-
-.banner-login {
-  width: 50%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  z-index: -1;
-}
-
-.banner-login img {
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
-}
-
 /* Loading Component */
 
 .loading {

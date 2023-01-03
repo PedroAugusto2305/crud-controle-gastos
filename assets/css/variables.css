@@ -90,3 +90,18 @@
   font-size: 1.6rem;
   color: var(--gray);
 }
+
+.image-banner {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-banner img {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
