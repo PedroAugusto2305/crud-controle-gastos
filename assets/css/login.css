@@ -42,9 +42,7 @@
   border: 1px solid #E8E8E8;
 }
 
-.form-input input,
-[type=email],
-[type=password] {
+.form-input input {
   width: 35rem;
   height: 5rem;
   border-radius: 5px;
