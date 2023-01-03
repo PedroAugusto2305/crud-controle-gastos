@@ -8,25 +8,43 @@ function onChangePassword() {
 }
 
 function login() {
-  firebase.auth().signInWithEmailAndPassword(form.email().value, form.password().value).then(response => {
-    window.location.href = "./assets/pages/home.html";
+  // showLoading();
+  firebase.auth().signInWithEmailAndPassword(
+    form.email().value, form.password().value
+  ).then(() => {
+    // hideLoading();
+    window.location.href = "pages/home/home.html";
   }).catch(error => {
-    alert(getErrorMessage(error))
+    // hideLoading();
+    alert(getErrorMessage(error));
   });
-
-  function getErrorMessage(error) {
-    if (error.code == 'auth/wrong-password') {
-      return "Usuário não encontrado!";
-    }
-    return error.message;
-  }
 }
 
+function getErrorMessage(error) {
+  if (error.code == "auth/user-not-found") {
+    return "Usuário não encontrado";
+  } else if (error.code == "auth/wrong-password") {
+    return "Senha inválida";
+  }
+  return error.message;
+}
 
 function register() {
   // showLoading();
   window.location.href = "./assets/pages/register.html";
 }
+
+function RecoveryPassword() {
+  // showLoading();
+  firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+    hideLoading();
+    alert('Email enviado com sucesso');
+  }).catch(error => {
+    // hideLoading();
+    alert(getErrorMessage(error));
+  });
+}
+
 
 function isEmailValid() {
   const email = form.email().value;

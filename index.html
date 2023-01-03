@@ -35,7 +35,7 @@
                 <input type="radio" name="remember">
                 <label for="remember">Lembrar de mim</label>
               </div>
-            <button type="button" class="password-recovery" id="recoverPassword" disabled="true">Recuperar senha</button>
+            <button type="button" class="password-recovery"  id="recoverPassword" onclick="RecoveryPassword()" disabled="true">Recuperar senha</button>
             </div>
             <button type="button" class="login" id="loginBtn" disabled="true" onclick="login()">Entrar</button>
             <button type= "button" class="register" onclick="register()">Registrar</button>
@@ -52,12 +52,12 @@
       </section>
     </section>
   </main>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/validations.js"></script>
+  <!-- <script src="./assets/js/loading.js"></script> -->
+  
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+  <script src="./assets/js/firebase.js"></script>
 </body>
-<script src="./assets/js/main.js"></script>
-<script src="./assets/js/validations.js"></script>
-<!-- <script src="./assets/js/loading.js"></script> -->
-
-<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
-<script src="./assets/js/firebase.js"></script>
 </html>
