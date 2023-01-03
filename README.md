@@ -16,7 +16,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Configuração do Firebase authentication
 - [x] Conectar Firebase à aplicação
 - [ ] Componente de Loading
-- [ ] Password Recovery com Firebase
+- [x] Password Recovery com Firebase
 
 ## 📫 Contribuindo para o projeto.
 
