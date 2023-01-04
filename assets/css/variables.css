@@ -72,10 +72,6 @@
   padding: 0.5rem;
 }
 
-.input-form-last {
-  margin-bottom: 3.6rem;
-}
-
 .input-form:focus {
   outline: 0;
   background-color: #f6f6f6;
