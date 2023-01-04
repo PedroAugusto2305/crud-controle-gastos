@@ -21,40 +21,64 @@
             <h2 class="register-subtitle">Começe de graça!</h2>
             <h1 class="register-title">Crie sua conta</h1>
 
-            <label for="first-name" class="form-label">Primeiro Nome</label>
-            <input
-              type="text"
-              name="first-name"
-              id="first-name"
-              class="input-form"
-            />
+            <div class="form-input">
+              <label for="first-name" class="form-label">Nome</label>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                class="input-form"
+              />
+            </div>
 
-            <label for="second-name" class="form-label">Sobrenome</label>
-            <input
-              type="text"
-              name="second-name"
-              id="second-name"
-              class="input-form"
-            />
+            <div class="form-input">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="input-form"
+                onchange="onChangeEmail()"
+              />
+              <p class="error" id="emailRequiredError">Email é obrigatório</p>
+              <p class="error" id="emailInvalidError">Email é inválido</p>
+            </div>
 
-            <label for="create-password" class="form-label">Senha</label>
-            <input
-              type="password"
-              name="create-password"
-              id="create-password"
-              class="input-form"
-            />
+            <div class="form-input">
+              <label for="create-password" class="form-label">Senha</label>
+              <input
+                type="password"
+                name="create-password"
+                id="password"
+                class="input-form"
+                onchange="onChangePassword()"
+              />
+              <p class="error" id="passwordRequiredError">
+                Senha é obrigatória
+              </p>
+              <p class="error" id="passwordMinLengthError">
+                Senha deve conter pelo menos 6 caracteres
+              </p>
+            </div>
 
-            <label for="confirm-password" class="form-label"
-              >Confirme sua senha</label
-            >
-            <input
-              type="password"
-              name="confirm-password"
-              id="confirm-password"
-              class="input-form input-form-last"
-            />
-            <button type="submit" class="green-button-form">Cadastrar</button>
+            <div class="form-input">
+              <label for="confirm-password" class="form-label"
+                >Confirme sua senha</label
+              >
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirmPassword"
+                class="input-form"
+                onchange="onChangeConfirmPassword()"
+              />
+              <p class="error" id="passwordDoesntMatchError">
+                Senha e Confirmar Senha devem ser iguais
+              </p>
+            </div>
+            <div class="button-container">
+              <button type="button" class="green-button-form">Cadastrar</button>
+            </div>
           </form>
         </div>
         <section class="image-banner">
@@ -62,5 +86,7 @@
         </section>
       </section>
     </main>
+    <script src="../js/register.js"></script>
+    <script src="../js/validations.js"></script>
   </body>
 </html>
