@@ -1,7 +1,5 @@
 # CRUD - Controle de gastos
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
-
 <img src="./assets/images/pagina-login.jpg" alt="login imagem">
 
 > Projeto criado com o intuito de aplicar meus conhecimentos nas tecnologias HTML, CSS e JS, além de também contrair novos conhecimentos de tecnologias como Firebase, Express, API Rest entre outras.
@@ -10,17 +8,15 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Página de login
-- [x] Validação do formulário
-- [x] Navegação entre páginas
-- [x] Configuração do Firebase authentication
-- [x] Conectar Firebase à aplicação
-- [ ] Componente de Loading
-- [x] Password Recovery com Firebase
+- [ ] Tela do dashboard (Desktop)
+- [ ] Consulta de dados com JS
+- [ ] Queries e Índices do banco de dados
+- [ ] Validação do formulário de transação
+- [ ] Salvar transação no banco de dados
+- [ ] Atualizar documento do firestore com JS
+- [ ] Camada de serviço para acessar o backend
 
 ## 📫 Contribuindo para o projeto.
-
-<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
 
 Para contribuir com o projeto, siga estas etapas:
 
