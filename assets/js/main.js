@@ -65,7 +65,6 @@ function toggleEmailErrors() {
   form.emailInvalidError().style.display = validateEmail(email) ? 'none' : 'block';
 }
 
-
 function togglePasswordErrors() {
   const password = form.password().value;
   form.passwordRequiredError().style.display = password ? 'none' : 'block';
@@ -78,7 +77,6 @@ function toggleButtonDisable() {
   const passwordValid = isPasswordValid();
   form.loginButton().disabled = !emailValid || !passwordValid;
 }
-
 
 function isPasswordValid() {
   const password = form.password().value;

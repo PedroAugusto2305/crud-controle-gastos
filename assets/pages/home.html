@@ -15,10 +15,15 @@
   </head>
   <body>
     <main>
-      <section class="max-width home-container">
-        <h1>Aguarde enquanto desenvolvo essa página.</h1>
-        <img src="../images/404-error.png" alt="404 error image" />
-      </section>
+      <button type="button" class="green-button-form" onclick="logout()">
+        Sair
+      </button>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/auth-guard.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/validations.js"></script>
   </body>
 </html>
