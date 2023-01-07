@@ -14,41 +14,121 @@
     <title>Home - Controle de Gastos</title>
   </head>
   <body>
-    <main>
-      <div class="container-side">
-        <section class="side-menu">
-          <ul>
-            <li>
-              <a href="#">
-                <span class="icon"
-                  ><ion-icon name="person-outline"></ion-icon
-                ></span>
-                <span class="side-menu-title">User Name</span></a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><span class="icon"
-                  ><ion-icon name="home-outline"></ion-icon></span
-                ><span class="side-menu-section">Home</span></a
-              >
-            </li>
-            <li>
-              <a href="#">
-                <span class="icon"
-                  ><ion-icon name="log-out-outline"></ion-icon></span
-                ><span class="side-menu-section" onclick="logout()"
-                  >Sair</span
-                ></a
-              >
-            </li>
-          </ul>
-        </section>
-      </div>
+    <div class="container-side">
+      <section class="side-menu">
+        <ul>
+          <li>
+            <a href="#">
+              <!-- <span class="user-icon"
+                ><ion-icon name="person-outline"></ion-icon
+              ></span> -->
+              <span class="side-menu-title">Controle Financeiro</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="icon"
+                ><ion-icon name="home-outline"></ion-icon></span
+              ><span class="side-menu-section">Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"
+                ><ion-icon name="log-out-outline"></ion-icon></span
+              ><span class="side-menu-section" onclick="logout()">Sair</span></a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
+    <main id="home">
+      <header>
+        <nav class="navbar">
+          <div class="hamburger" onclick="closeMenu()">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div class="search-bar">
+            <label for="">
+              <input type="text" name="" id="" placeholder="Search Here" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+          <div class="user-image">
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </div>
+        </nav>
+      </header>
+      <section class="card-box">
+        <article class="card">
+          <header>
+            <p class="card-value">R$ 1.000,00</p>
+            <h2 class="card-title">Receita Total</h2>
+          </header>
+          <ion-icon name="cash-outline"></ion-icon>
+        </article>
 
-      <!-- <button type="button" class="green-button-form" onclick="logout()">
-        Sair
-      </button> -->
+        <article class="card">
+          <header>
+            <p class="card-value">R$ 1.000,00</p>
+            <h2 class="card-title">Despesa Total</h2>
+          </header>
+          <ion-icon name="card-outline"></ion-icon>
+        </article>
+
+        <article class="card">
+          <header>
+            <p class="card-value">R$ 1.000,00</p>
+            <h2 class="card-title">Investimento Total</h2>
+          </header>
+          <ion-icon name="wallet-outline"></ion-icon>
+        </article>
+      </section>
+
+      <section class="transactions">
+        <div class="recent-orders">
+          <header class="transactions-title">
+            <h2>Transações recentes</h2>
+            <a href="#" class="transactions-filter">Filtrar</a>
+          </header>
+          <table>
+            <thead class="transactions-subtitle">
+              <tr>
+                <td>Nome</td>
+                <td>Preço</td>
+                <td>Data</td>
+                <td>Tipo</td>
+              </tr>
+            </thead>
+            <tbody class="transactions-list">
+              <tr>
+                <td class="transactions-item">Supermercado</td>
+                <td class="transactions-item">R$ 200,00</td>
+                <td class="transactions-item">23/05/2023</td>
+                <td class="transactions-item">
+                  <span class="tag food">Alimentação</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="transactions-item">Supermercado</td>
+                <td class="transactions-item">R$ 200,00</td>
+                <td class="transactions-item">23/05/2023</td>
+                <td class="transactions-item">
+                  <span class="tag food">Alimentação</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="transactions-item">Supermercado</td>
+                <td class="transactions-item">R$ 200,00</td>
+                <td class="transactions-item">23/05/2023</td>
+                <td class="transactions-item">
+                  <span class="tag food">Alimentação</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
@@ -56,6 +136,7 @@
     <script src="../js/auth-guard.js"></script>
     <script src="../js/home.js"></script>
     <script src="../js/validations.js"></script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
