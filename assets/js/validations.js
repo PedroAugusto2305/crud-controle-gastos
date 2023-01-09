@@ -1,3 +1,1 @@
-function validateEmail(email) {
-  return /\S+@\S+\.\S+/.test(email);
-}
+function validateEmail() { email => { /\S+@\S+\.\S+/.test(email) } }

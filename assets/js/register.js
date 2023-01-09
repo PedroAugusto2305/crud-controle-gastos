@@ -1,8 +1,4 @@
-firebase.auth().onAuthStateChanged(user => {
-  if (user) {
-    window.location.href = "home.html";
-  }
-})
+firebase.auth().onAuthStateChanged(user => { if (user) { window.location.href = "home.html" } })
 
 function onChangeEmail() {
   const email = form.email().value;
@@ -18,16 +14,9 @@ function onChangePassword() {
 }
 
 function register() {
-
   const email = form.email().value;
   const password = form.password().value;
-  firebase.auth().createUserWithEmailAndPassword(
-    email, password
-  ).then(() => {
-    window.location.href = "home.html";
-  }).catch(error => {
-    alert(getErrorMessage(error));
-  })
+  firebase.auth().createUserWithEmailAndPassword(email, password).then(() => window.location.href = "home.html").catch(error => alert(getErrorMessage(error)))
 }
 
 function getErrorMessage(error) {

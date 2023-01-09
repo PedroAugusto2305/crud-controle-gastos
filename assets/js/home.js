@@ -1,31 +1,21 @@
+// função que realiza logout
 function logout() {
-  firebase.auth().signOut().then(() => {
-    window.location.href = "../../index.html";
-  }).catch(() => {
-    alert('Erro ao fazer logout!')
-  })
+  firebase.auth().signOut().then(() => window.location.href = "../../index.html").catch(() => alert('Erro ao fazer logout!'))
 }
 
-// menu toggle
+// Recolher/Abrir menu lateral
 function closeMenu() {
   const toggle = document.querySelector('.hamburger');
   const sideMenu = document.querySelector('.side-menu');
   const main = document.querySelector('#home');
 
-  toggle.onclick = () => {
-    sideMenu.classList.toggle('active');
-    main.classList.toggle('active');
-  }
+  toggle.onClick = () => sideMenu.classList.toggle('active');
+  main.classList.toggle('active');
 }
 
 // transactions functions
-
 findTransactions();
-function findTransactions() {
-  setTimeout(() => {
-    addTransactionsToScreen(fakeTransactions)
-  }, 1000)
-}
+function findTransactions() { setTimeout(() => addTransactionsToScreen(fakeTransactions), 1000) }
 
 function addTransactionsToScreen(transactions) {
   const transactionsList = document.getElementById('transactionsList');
