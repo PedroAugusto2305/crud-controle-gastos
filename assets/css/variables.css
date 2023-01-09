@@ -63,6 +63,21 @@
   cursor: pointer;
 }
 
+.floating-button .fab {
+  position: fixed;
+  bottom: 3.2rem;
+  right: 3.2rem;
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 5rem;
+  border: none;
+  font-size: 2.4rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-color: var(--purple-light);
+  color: var(--white);
+}
+
 .input-form {
   width: 35rem;
   height: 5rem;
