@@ -1,1 +1,4 @@
-function validateEmail() { email => { /\S+@\S+\.\S+/.test(email) } }
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
