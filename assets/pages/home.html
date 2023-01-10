@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -94,7 +94,7 @@
           <table id="tableClient">
             <thead class="transactions-subtitle">
               <tr>
-                <td>Nome</td>
+                <td>Descrição</td>
                 <td>Preço</td>
                 <td>Data</td>
                 <td>Tipo</td>
@@ -114,9 +114,9 @@
             <div class="modal-title">
               <label for="">Tipo de transação</label>
             </div>
-            <input type="radio" name="expense" id="expense" />
+            <input type="radio" name="radio" id="expense" checked />
             <label for="expense" class="radio-label">Despesa</label>
-            <input type="radio" name="income" id="income" />
+            <input type="radio" name="radio" id="income" />
             <label for="income" class="radio-label">Receita</label>
           </div>
           <div id="close-modal" class="close-button">
@@ -173,22 +173,23 @@
           </div>
           <div class="modal-field">
             <div class="label-field">
-              <label for="">Nome da Transação</label>
+              <label for="">Descrição</label>
             </div>
             <input type="text" name="name" id="transaction-name" />
-            <!-- <p class="error" id="money-required-error">Valor inválido.</p> -->
           </div>
 
-          <button id="modal-button" class="green-button-form">
+          <button
+            id="modal-button"
+            class="green-button-form"
+            onclick="saveTransaction()"
+          >
             Inserir Transação
           </button>
         </div>
       </section>
 
       <div class="floating-button">
-        <button id="open-modal" class="fab" onclick="newTransaction()">
-          +
-        </button>
+        <button id="open-modal" class="fab">+</button>
       </div>
     </main>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>

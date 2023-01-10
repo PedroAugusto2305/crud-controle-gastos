@@ -32,14 +32,13 @@ function findTransactions(user) {
 }
 
 function addTransactionsToScreen(transactions) {
-
   transactions.forEach(transactions => {
     const newRow = document.createElement('tr')
     newRow.classList.add('transactions-list')
     newRow.insertAdjacentHTML('beforeend', `
     <td class="transactions-item">${transactions.description}</td>
     <td class="transactions-item">R$${transactions.money.toFixed(2)}</td>
-    <td class="transactions-item">${transactions.date}</td>
+    <td class="transactions-item">${formatDate(transactions.date)}</td >
     <td class="transactions-item">${transactions.type}</td>
     <td class="transactions-item">${transactions.transactionType}</td>
     ` )
@@ -47,11 +46,9 @@ function addTransactionsToScreen(transactions) {
   })
 }
 
-function formatMoney(money) {
-  return ` ${money.value.toFixed(2)}`
+function formatDate(date) {
+  return new Date(date).toLocaleDateString('pt-br');
 }
-
-function newTransaction() { }
 
 const openModalBtn = document.getElementById('open-modal');
 const closeModalBtn = document.getElementById('close-modal');
