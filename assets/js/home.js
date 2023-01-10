@@ -13,21 +13,23 @@ function closeMenu() {
   main.classList.toggle('active');
 }
 
-// transactions functions
+firebase.auth().onAuthStateChanged(user => { if (user) { findTransactions(user) } })
 
-function findTransactions() {
+function findTransactions(user) {
   firebase.firestore()
     .collection('transactions')
+    .where('user.uid', '==', user.uid)
+    .orderBy('date', 'desc')
     .get()
-    .then(snapshop => {
-      const transactions = snapshop.docs.map(doc => doc.data())
-      addTransactionsToScreen(transactions)
+    .then(snapshot => {
+      const transactions = snapshot.docs.map(doc => doc.data());
+      addTransactionsToScreen(transactions);
+    })
+    .catch(error => {
+      console.log(error);
+      alert('Erro ao recuperar transacoes');
     })
 }
-
-
-findTransactions();
-// function findTransactions() { setTimeout(() => addTransactionsToScreen(fakeTransactions), 1000) }
 
 function addTransactionsToScreen(transactions) {
 
