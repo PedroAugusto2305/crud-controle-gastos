@@ -8,9 +8,9 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [ ] Tela do dashboard (Desktop)
-- [ ] Consulta de dados com JS
-- [ ] Queries e Índices do banco de dados
+- [x] Tela do dashboard (Desktop)
+- [x] Consulta de dados com JS
+- [x] Queries e Índices do banco de dados
 - [ ] Validação do formulário de transação
 - [ ] Salvar transação no banco de dados
 - [ ] Atualizar documento do firestore com JS
