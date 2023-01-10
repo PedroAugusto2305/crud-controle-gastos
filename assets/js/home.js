@@ -14,76 +14,37 @@ function closeMenu() {
 }
 
 // transactions functions
+
+function findTransactions() {
+  firebase.firestore()
+    .collection('transactions')
+    .get()
+    .then(snapshop => {
+      const transactions = snapshop.docs.map(doc => doc.data())
+      addTransactionsToScreen(transactions)
+    })
+}
+
+
 findTransactions();
-function findTransactions() { setTimeout(() => addTransactionsToScreen(fakeTransactions), 1000) }
+// function findTransactions() { setTimeout(() => addTransactionsToScreen(fakeTransactions), 1000) }
 
 function addTransactionsToScreen(transactions) {
-  const transactionsList = document.getElementById('transactionsList');
 
-  transactions.forEach(transaction => {
-    const li = document.createElement('li');
-    li.classList.add(transaction.type);
-
-    const name = document.createElement('p');
-    name.classList.add('transactions-item');
-    name.innerHTML = transaction.transactionType;
-    li.appendChild(name);
-
-    const price = document.createElement('p');
-    price.classList.add('transactions-item');
-    price.innerHTML = formatMoney(transaction.money);
-    li.appendChild(price);
-
-    const date = document.createElement('p');
-    date.classList.add('transactions-item');
-    date.innerHTML = transaction.date;
-    li.appendChild(date);
-
-    const type = document.createElement('p');
-    type.classList.add('transactions-item');
-    type.innerHTML = transaction.type;
-    li.appendChild(type)
-
-    if (transaction.description) {
-      const description = document.createElement('p');
-      description.classList.add('transactions-item');
-      description.innerHTML = transaction.description;
-      li.appendChild(description);
-    }
-
-    transactionsList.appendChild(li)
-  });
+  transactions.forEach(transactions => {
+    const newRow = document.createElement('tr')
+    newRow.classList.add('transactions-list')
+    newRow.insertAdjacentHTML('beforeend', `
+    <td class="transactions-item">${transactions.description}</td>
+    <td class="transactions-item">R$${transactions.money}</td>
+    <td class="transactions-item">${transactions.date}</td>
+    <td class="transactions-item">${transactions.type}</td>
+    <td class="transactions-item">${transactions.transactionType}</td>
+    ` )
+    document.querySelector('#tableClient>tbody').appendChild(newRow)
+  })
 }
 
 function formatMoney(money) {
-  return `${money.currency} ${money.value.toFixed(2)}`
+  return ` ${money.value.toFixed(2)}`
 }
-
-const fakeTransactions = [{
-  type: 'expense',
-  date: '08/01/2023',
-  money: {
-    currency: 'R$',
-    value: 10
-  },
-  transactionType: 'Alimentação',
-  description: 'Supermercado'
-}, {
-  type: 'income',
-  date: '05/01/2023',
-  money: {
-    currency: 'R$',
-    value: 5000
-  },
-  transactionType: 'Salário',
-  description: 'Empresa A'
-}, {
-  type: 'expense',
-  date: '06/01/2023',
-  money: {
-    currency: 'R$',
-    value: 10
-  },
-  transactionType: 'Transporte',
-  description: 'Metrô ida e volta'
-}]
