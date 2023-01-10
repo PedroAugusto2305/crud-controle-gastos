@@ -62,10 +62,17 @@
   margin-left: .5rem;
 }
 
-#modal .modal-radio .modal-title {
+#modal .modal-title label {
   font-size: 2.4rem;
   color: var(--gray);
-  margin-bottom: 3rem;
+}
+
+.modal-title {
+  margin-bottom: 1rem;
+}
+
+.label-field {
+  margin-top: 2rem;
 }
 
 #modal .modal-radio input {
@@ -92,6 +99,10 @@ select {
 #modal .modal-field input:focus {
   outline: 0;
   background-color: #f6f6f6;
+}
+
+#modal-button {
+  margin-top: 4rem;
 }
 
 #fade {

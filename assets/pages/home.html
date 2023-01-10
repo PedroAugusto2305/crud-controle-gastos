@@ -97,8 +97,8 @@
                 <td>Nome</td>
                 <td>Preço</td>
                 <td>Data</td>
-                <td>Entrada/saida</td>
                 <td>Tipo</td>
+                <td>Categoria</td>
               </tr>
             </thead>
             <tbody></tbody>
@@ -111,8 +111,8 @@
       <section id="modal" class="hide">
         <div class="modal-header">
           <div class="modal-radio">
-            <div>
-              <label class="modal-title" for="">Tipo de transação</label>
+            <div class="modal-title">
+              <label for="">Tipo de transação</label>
             </div>
             <input type="radio" name="expense" id="expense" />
             <label for="expense" class="radio-label">Despesa</label>
@@ -123,19 +123,40 @@
             <ion-icon name="close-outline"></ion-icon>
           </div>
         </div>
+
         <div class="fields">
           <div class="modal-field">
-            <div><label for="">Data da Transação</label></div>
-            <input type="date" name="date" id="date" />
+            <div class="label-field">
+              <label for="">Data da Transação</label>
+            </div>
+            <input
+              type="date"
+              name="date"
+              id="date"
+              onchange="onChangeDate()"
+            />
+            <p class="error" id="date-required-error">Data é inválida.</p>
           </div>
           <div class="modal-field">
-            <div><label for="">Valor</label></div>
-            <input type="number" name="money" id="money" />
+            <div class="label-field"><label for="">Valor</label></div>
+            <input
+              type="number"
+              name="money"
+              id="money"
+              onchange="onChangeValue()"
+            />
+            <p class="error" id="money-required-error">Valor inválido.</p>
           </div>
           <div class="modal-field">
-            <div><label for="">Tipo da transação</label></div>
-            <select name="" id="">
-              <option>Escolha uma opção</option>
+            <div class="label-field">
+              <label for="">Categoria</label>
+            </div>
+            <select
+              name=""
+              id="transaction-type"
+              onchange="onChangeTransactionType()"
+            >
+              <option value="">Escolha uma opção</option>
               <option>Transporte</option>
               <option>Exercício físico</option>
               <option>Alimentação</option>
@@ -146,9 +167,21 @@
               <option>Salário</option>
               <option>Freelance</option>
             </select>
+            <p class="error" id="transaction-type-required-error">
+              Escolha um tipo de transação válida.
+            </p>
+          </div>
+          <div class="modal-field">
+            <div class="label-field">
+              <label for="">Nome da Transação</label>
+            </div>
+            <input type="text" name="name" id="transaction-name" />
+            <!-- <p class="error" id="money-required-error">Valor inválido.</p> -->
           </div>
 
-          <button class="green-button-form">Inserir Transação</button>
+          <button id="modal-button" class="green-button-form">
+            Inserir Transação
+          </button>
         </div>
       </section>
 
@@ -165,7 +198,7 @@
     <script src="../js/auth-guard.js"></script>
     <script src="../js/home.js"></script>
     <script src="../js/validations.js"></script>
-
+    <script src="../js/transactions.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
