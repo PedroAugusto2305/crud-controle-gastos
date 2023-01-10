@@ -38,7 +38,7 @@ function addTransactionsToScreen(transactions) {
     newRow.classList.add('transactions-list')
     newRow.insertAdjacentHTML('beforeend', `
     <td class="transactions-item">${transactions.description}</td>
-    <td class="transactions-item">R$${transactions.money}</td>
+    <td class="transactions-item">R$${transactions.money.toFixed(2)}</td>
     <td class="transactions-item">${transactions.date}</td>
     <td class="transactions-item">${transactions.type}</td>
     <td class="transactions-item">${transactions.transactionType}</td>
@@ -50,3 +50,14 @@ function addTransactionsToScreen(transactions) {
 function formatMoney(money) {
   return ` ${money.value.toFixed(2)}`
 }
+
+function newTransaction() { }
+
+const openModalBtn = document.getElementById('open-modal');
+const closeModalBtn = document.getElementById('close-modal');
+const modal = document.getElementById('modal');
+const fade = document.getElementById('fade');
+
+const toggleModal = () => { [modal, fade].forEach((el) => el.classList.toggle('hide')) }
+
+[openModalBtn, closeModalBtn, fade].forEach((el) => { el.addEventListener('click', () => toggleModal()) })

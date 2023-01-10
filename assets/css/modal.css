@@ -1,0 +1,115 @@
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: var(--white);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, .08);
+  border-radius: 2rem;
+  width: 40rem;
+  max-width: 90%;
+  padding: 2rem;
+  font-family: 'Roboto';
+
+}
+
+#fade,
+#modal {
+  transition: .5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#modal .modal-header .close-button {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#modal .modal-header ion-icon {
+  font-size: 3.2rem;
+  color: var(--gray);
+}
+
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal .modal-radio {
+  margin-bottom: 1rem;
+  margin-left: .4rem;
+}
+
+#modal .modal-radio label {
+  font-size: 1.6rem;
+  color: var(--gray);
+
+}
+
+#modal .modal-radio .radio-label {
+  margin-left: .5rem;
+}
+
+#modal .modal-radio .modal-title {
+  font-size: 2.4rem;
+  color: var(--gray);
+  margin-bottom: 3rem;
+}
+
+#modal .modal-radio input {
+  margin: 1rem 0;
+  border: 1px solid var(--white);
+}
+
+#modal .modal-field label {
+  font-size: 2rem;
+  color: var(--gray);
+}
+
+#modal .modal-field input,
+select {
+  width: 35rem;
+  height: 5rem;
+  border-radius: 5px;
+  margin: 1.1rem 0;
+  border: 1px solid #E8E8E8;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+}
+
+#modal .modal-field input:focus {
+  outline: 0;
+  background-color: #f6f6f6;
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#modal.hide,
+#fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hide {
+  top: 0;
+}

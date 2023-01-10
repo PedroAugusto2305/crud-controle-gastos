@@ -101,23 +101,61 @@
                 <td>Tipo</td>
               </tr>
             </thead>
-            <tbody>
-              <!-- <tr class="transactions-list">
-                <td class="transactions-item">Supermercado</td>
-                <td class="transactions-item">R$200,00</td>
-                <td class="transactions-item">23/05/2023</td>
-                <td class="transactions-item">Saida</td>
-                <td class="transactions-item">Alimentação</td>
-              </tr> -->
-            </tbody>
+            <tbody></tbody>
           </table>
-          <!-- <ul id="transactionsList" class="transactions-list">
-          </ul> -->
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div id="fade" class="hide"></div>
+      <section id="modal" class="hide">
+        <div class="modal-header">
+          <div class="modal-radio">
+            <div>
+              <label class="modal-title" for="">Tipo de transação</label>
+            </div>
+            <input type="radio" name="expense" id="expense" />
+            <label for="expense" class="radio-label">Despesa</label>
+            <input type="radio" name="income" id="income" />
+            <label for="income" class="radio-label">Receita</label>
+          </div>
+          <div id="close-modal" class="close-button">
+            <ion-icon name="close-outline"></ion-icon>
+          </div>
+        </div>
+        <div class="fields">
+          <div class="modal-field">
+            <div><label for="">Data da Transação</label></div>
+            <input type="date" name="date" id="date" />
+          </div>
+          <div class="modal-field">
+            <div><label for="">Valor</label></div>
+            <input type="number" name="money" id="money" />
+          </div>
+          <div class="modal-field">
+            <div><label for="">Tipo da transação</label></div>
+            <select name="" id="">
+              <option>Escolha uma opção</option>
+              <option>Transporte</option>
+              <option>Exercício físico</option>
+              <option>Alimentação</option>
+              <option>Educação</option>
+              <option>Lazer</option>
+              <option>Saúde</option>
+              <option>Presentes</option>
+              <option>Salário</option>
+              <option>Freelance</option>
+            </select>
+          </div>
+
+          <button class="green-button-form">Inserir Transação</button>
         </div>
       </section>
 
       <div class="floating-button">
-        <button class="fab">+</button>
+        <button id="open-modal" class="fab" onclick="newTransaction()">
+          +
+        </button>
       </div>
     </main>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
