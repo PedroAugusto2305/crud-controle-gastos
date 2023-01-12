@@ -21,7 +21,7 @@ function saveTransaction() {
     .then(() => window.location.href = "./home.html").catch(() => { alert('Erro ao salvar transação') })
 }
 
-
+// Create
 function createTransaction() {
   return {
     type: form.typeExpense().checked ? "expense" : "income",
@@ -47,4 +47,10 @@ const form = {
   description: () => document.getElementById('transaction-name')
 }
 
+// Update
+function getTransactionUid() {
+  const userId = createTransaction().user.uid;
+  return console.log(userId);
+}
 
+getTransactionUid()

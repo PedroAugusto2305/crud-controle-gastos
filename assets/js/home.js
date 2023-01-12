@@ -22,7 +22,7 @@ function findTransactions(user) {
     .orderBy('date', 'desc')
     .get()
     .then(snapshot => {
-      const transactions = snapshot.docs.map(doc => doc.data());
+      const transactions = snapshot.docs.map(doc => ({ ...doc.data(), uid: doc.id }))
       addTransactionsToScreen(transactions);
     })
     .catch(error => {
@@ -35,6 +35,7 @@ function addTransactionsToScreen(transactions) {
   transactions.forEach(transactions => {
     const newRow = document.createElement('tr')
     newRow.classList.add('transactions-list')
+    newRow.addEventListener('click', () => { toggleModal(transactions.uid) })
     newRow.insertAdjacentHTML('beforeend', `
     <td class="transactions-item">${transactions.description}</td>
     <td class="transactions-item">R$${transactions.money.toFixed(2)}</td>
